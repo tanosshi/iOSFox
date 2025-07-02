@@ -27,7 +27,8 @@
               new RegExp(ASCII, "g"),
               `<img src="${ext.runtime.getURL(
                 imgURL
-              )}" style="vertical-align: middle; position: relative; top: -1px;" width="18" height="18">`
+              )}" style="vertical-align: middle; cursor: text; pointer-events:none; position: relative; top: -1px;" width="18" height="18">
+              <span style="position: absolute; top: 0; left: 0; cursor: text; opacity: 0; width:25px;">${ASCII}</span>`
             );
             replaced = true;
           }
