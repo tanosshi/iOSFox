@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "iOSFox",
+  "description": "Emojis will be replaced with ones from Apple",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": ["pics/*.png", "res.json"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "example@privacy.com"
+    }
+  }
+}
