@@ -20,7 +20,8 @@
             node.parentElement &&
             node.innerText &&
             node.innerText.includes(ASCII) &&
-            !node.innerHTML.includes('{"')
+            !node.innerHTML.includes('{"') &&
+            /\p{Emoji}/u.test(ASCII)
           ) {
             node.innerHTML = node.innerHTML.replace(
               new RegExp(ASCII, "g"),
