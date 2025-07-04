@@ -20,6 +20,7 @@
             node.parentElement &&
             node.innerText &&
             node.innerText.includes(ASCII) &&
+            node.tagName.toLowerCase() !== "textarea" &&
             !node.innerHTML.includes('{"') &&
             /\p{Emoji}/u.test(ASCII)
           ) {
